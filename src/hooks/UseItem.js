@@ -9,7 +9,7 @@ import { storageModel } from "../models/storage";
  * @param {string} itemId  - Id of the item to use
  * @returns {list<string, function, objects>} content state, set content state, item value
  */
-export const Item = (storageName, itemId) => {
+export const UseItem = (storageName, itemId) => {
   const appStorage = new storageModel(storageName);
   const item = appStorage.getItem(itemId);
 
