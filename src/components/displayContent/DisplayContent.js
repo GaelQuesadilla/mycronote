@@ -10,5 +10,3 @@ export const DisplayContent = (props)=>{
   return<ReactMarkdown>{props.content}</ReactMarkdown>
 
 }
-
-DisplayContent()
