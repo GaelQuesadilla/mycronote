@@ -140,6 +140,12 @@ export class storageModel {
    */
 
   updateItem(itemName, newValue) {
+
+    if (!this.existItem(itemName)) {
+      console.error("Item dont exist");
+      return null;
+    }
+
     const item = this.getItem(itemName);
     const index = this.#getItemIndex(itemName);
     const data = this.getData();
