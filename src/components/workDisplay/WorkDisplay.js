@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Components
-import { InputArea } from "../input/InputArea";
+import { InputArea } from "../Input/InputArea";
 import { DisplayContent } from "../displayContent/DisplayContent";
 import { UseItem } from "../../hooks/UseItem";
 
@@ -19,6 +19,7 @@ export const WorkDisplay = (props) => {
     setContent(event.target.value)
   }
 
+  console.debug("Rendering WorkDisplay component", {storageName, itemId, content, item})
   return (
     <>
       <InputArea content={content} handleChange={handleChange}/>

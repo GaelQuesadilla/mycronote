@@ -1,6 +1,13 @@
-const Root = ()=>{
+import { WorkDisplay } from "../components/workDisplay/WorkDisplay";
+import { useParams } from "react-router-dom";
 
-  return <h1>Root page...</h1>
-}
+const Root = () => {
+  const { storageName, itemId } = useParams();
+  return (
+    <>
+      <WorkDisplay storageName={storageName} itemId={itemId}></WorkDisplay>
+    </>
+  );
+};
 
-export default Root
+export default Root;
