@@ -109,6 +109,12 @@ export class storageModel {
    */
 
   createitem(itemName, parent) {
+
+    if(this.existItem(itemName)){
+      console.warn("Item already exist")
+      return null
+    }
+
     const newItem = this.#getTemplateItem(itemName, parent);
     let data = this.getData();
     data.push(newItem);
@@ -148,5 +154,17 @@ export class storageModel {
     console.debug("data", data);
     console.debug("");
     this.#saveData(data);
+  }
+
+  /**
+   *  Checks if the element with the provided name exist in local storage
+   * @param {string} itemName Item id to check
+   * @returns {boolean} Exist element in the current local storage
+   */
+
+  existItem(itemName) {
+    const item = this.getItem(itemName)
+    const exist = !!item
+    return exist
   }
 }
