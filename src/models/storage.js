@@ -34,7 +34,7 @@ export class storageModel {
    * Saves a new local storage item with a template item as content
    */
   #createStorage() {
-    const storageTemplate = [this.#getTemplateItem("root", "root")];
+    const storageTemplate = [this.#getTemplateItem("global root", "global root")];
     this.#saveData(storageTemplate);
   }
 

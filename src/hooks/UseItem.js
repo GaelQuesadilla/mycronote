@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 
 /**
- * Hook to get and set the content of a item content 
- * @param {string} storageName - Name of the item in local storage 
+ * Hook to get and set the content of a item content
+ * @param {string} storageName - Name of the item in local storage
  * @param {string} itemId  - Id of the item to use
  * @returns {list<string, function, objects>} content state, set content state, item value
  */
@@ -20,11 +20,11 @@ export const UseItem = (storageName, itemId) => {
   console.debug("Using item hook", {storageName, itemId, item})
 
   useEffect(() => {
-    console.debug("Cheking if item exist")
-    if(!appStorage.existItem(itemId)){
-      console.warn("Item dont exist, returning to root item")
-      navigate(`/${storageName}/root`)
-      setContent(appStorage.getItem("root").content)
+    console.debug("Cheking if item exist");
+    if (!appStorage.existItem(itemId)) {
+      console.warn("Item dont exist, returning to root item");
+      navigate(`/${storageName}/global root`);
+      setContent(appStorage.getItem("global root").content);
     }
   }, [,]);
 
