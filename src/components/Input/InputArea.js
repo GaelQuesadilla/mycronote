@@ -10,5 +10,6 @@ export const InputArea = (props)=>{
   const {content, handleChange} = props
   return (<TextAreaAutoSize 
     onChange={(event)=>handleChange(event)}
-    value={content}/>)
+    value={content}
+    autoFocus/>)
 }

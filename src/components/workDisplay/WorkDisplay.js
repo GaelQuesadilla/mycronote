@@ -1,6 +1,4 @@
 // Dependencies
-import { useState } from "react";
-
 // Components
 import { InputArea } from "../Input/InputArea";
 import { DisplayContent } from "../displayContent/DisplayContent";
@@ -21,9 +19,14 @@ export const WorkDisplay = (props) => {
 
   console.debug("Rendering WorkDisplay component", {storageName, itemId, content, item})
   return (
-    <>
-      <InputArea content={content} handleChange={handleChange}/>
-      <DisplayContent content={content}/>
-    </>
+    <div className="work-display-area">
+      <div className="work-display-area__input">
+        <InputArea content={content} handleChange={handleChange} />
+      </div>
+
+      <div className="work-display-area__markdown">
+        <DisplayContent content={content} />
+      </div>
+    </div>
   );
 };

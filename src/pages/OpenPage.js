@@ -10,7 +10,7 @@ import { useEffect } from "react";
 export const OpenPage = () => {
   const navigate = useNavigate();
   const { storageName, itemId, scoop, itemName } = useParams();
-
+  
   useEffect(() => {
     let newItemId;
     if (scoop === "g") {
@@ -26,5 +26,7 @@ export const OpenPage = () => {
     navigate(`/${storageName}/${newItemId}`);
   }, [,]);
 
-  return <>REDIRECTING...</>;
+  return <>
+  <div className="content content--redirect">REDIRECTING...</div>;
+  </>
 };
