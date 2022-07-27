@@ -44,7 +44,6 @@ export class storageModel {
    */
   #storageExist() {
     let storage = this.#getStorage();
-    console.debug("Exist storage", !!storage);
     return !!storage;
   }
 
@@ -91,7 +90,6 @@ export class storageModel {
    * @param {object} data - The new data of the item
    */
   #saveData(data) {
-    console.debug("New data", data);
     window.localStorage.setItem(this.storageId, JSON.stringify(data));
   }
 
@@ -153,12 +151,8 @@ export class storageModel {
     item.content = newValue;
     item.updatedAt = new Date().getTime();
 
-    console.debug(item);
     data[index] = item;
 
-    console.debug("item", item);
-    console.debug("data", data);
-    console.debug("");
     this.#saveData(data);
   }
 

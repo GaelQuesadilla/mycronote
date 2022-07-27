@@ -20,7 +20,6 @@ export const WorkDisplay = (props) => {
     setContent(event.target.value)
   }
 
-  console.debug("Rendering WorkDisplay component", {storageName, itemId, content, item})
   return (
     <div className="work-display-area">
       <div className="work-display-area__input">

@@ -17,10 +17,7 @@ export const UseItem = (storageName, itemId) => {
 
   const [content, setContent] = useState(item?item.content:null);
 
-  console.debug("Using item hook", {storageName, itemId, item})
-
   useEffect(() => {
-    console.debug("Cheking if item exist");
     if (!appStorage.existItem(itemId)) {
       console.warn("Item dont exist, returning to root item");
       navigate(`/${storageName}/global root`);
