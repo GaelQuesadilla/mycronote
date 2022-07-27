@@ -1,4 +1,5 @@
-
+//Styles
+import "./Content.scss"
 /**
  * Default content container
  * @param {object} props 

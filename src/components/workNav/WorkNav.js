@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import { storageModel } from "../../models/storage";
 import { Brand } from "../global/Brand";
 
+//Styles
+import "./WorkNav.scss"
+
 /**
  * Basic navigation var to redirect to the parent item
  * @returns {Component} WorkNav component
@@ -15,11 +18,11 @@ export const WorkNav = () => {
   return (
     <div className="nav">
 
-      <div className="nav__brand">
+      <div className="nav__element nav__element-brand">
         <Brand/>
       </div>
-      <div className="nav__link">
-        <a className="link--nav" href={`/${storageName}/${parent}`}>parent: {parent}</a>
+      <div className="nav__element nav__element-link">
+        <a className="link link--nav" href={`/${storageName}/${parent}`}>parent: {parent}</a>
       </div>
     </div>
   );

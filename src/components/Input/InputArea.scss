@@ -1,0 +1,19 @@
+@use "../../scss/colors";
+
+.input-area {
+  background-color: colors.$background-ligth;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow: hidden;
+  padding: 20px 5px;
+  font-family: "Courier New", Courier, monospace;
+  color: colors.$dark-text;
+
+  border: 2px solid colors.$third;
+  box-shadow: 3px 3px #0001;
+
+  &:focus{
+    outline: 0;
+  }
+}

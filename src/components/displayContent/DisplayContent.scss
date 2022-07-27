@@ -1,0 +1,39 @@
+@use "../../scss/mixin";
+@use "../../scss/colors";
+
+.display-content{
+  padding: 20px 5px;
+  background-color: colors.$background-ligth;
+  word-wrap: break-word;
+  width: 100%;
+  height: 100%;
+  text-overflow: clip;
+  border: 2px solid colors.$third;
+  box-shadow: 3px 3px #0001;
+
+  // border-color: ;
+
+  *{
+    margin: 0;
+  }
+  h1, h2, h3, h4, h4, h5, h6{
+    line-height: 1em;
+    margin: 10px 0 10px 0;
+    color: colors.$second;
+  }
+
+  ul, ol {
+    margin: 10px;
+    li {
+      margin: 5px 0 0 0;
+      &::marker {
+        color: colors.$second;
+        font-weight: bold;
+      }
+    } 
+  }
+
+  a {
+    @include mixin.normal-link;
+  }
+}

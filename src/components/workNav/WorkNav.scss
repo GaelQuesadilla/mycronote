@@ -1,0 +1,11 @@
+@use "../../scss/colors";
+@use "../../scss/mixin";
+
+.nav {
+  @include mixin.navbar(50px);
+  background-color: transparentize(colors.$first, 0.05) ;
+  font-size: 17px;
+  color: colors.$ligth-text;
+  font-weight: normal;
+}
+

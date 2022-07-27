@@ -10,11 +10,13 @@ import { Content } from "../components/global/Content";
 const Root = () => {
   const params = useParams();
   const {storageName, itemId} = params
-  return (
+  return (<>
+    <WorkNav/>
     <Content name="root">
-      <WorkNav/>
       <WorkDisplay storageName={storageName} itemId={itemId}></WorkDisplay>
     </Content>
+  
+  </>
   );
 };
 

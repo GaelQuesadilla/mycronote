@@ -1,0 +1,36 @@
+.work-display-area{
+
+  @mixin element($flex:1) {
+
+    flex: $flex;
+    min-width: 200px;
+    max-width: 800px;
+    top: 0;
+  }
+  
+  gap: 20px;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  flex-wrap: wrap;
+  &__input{
+    @include element(2);
+        & :nth-child(1):focus {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 80vw;
+      // bottom: 0;
+      outline: 100000px solid #000d;
+
+    }
+
+    
+  } 
+
+  &__markdown{
+    @include element(4);
+  }
+}

@@ -1,0 +1,34 @@
+@use "colors";
+
+@mixin navbar ($heigth:50px) {
+  padding: 0 20px;
+  height: $heigth;
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+
+  &__element {
+    margin: 0 10px;
+  }
+}
+
+@mixin link {
+  color: inherit;
+  text-decoration: none;
+  &:hover{
+    text-shadow: 2px 2px #00000030;
+  }
+}
+
+@mixin normal-link { 
+  color: colors.$link;
+  &:link, &:visited {
+    color: colors.$link;
+
+  }
+}

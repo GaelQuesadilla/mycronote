@@ -1,0 +1,26 @@
+@use "scss/colors";
+@use "scss/mixin";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+  margin: 0px;
+  background-color: colors.$background;
+  color: colors.$dark-text;
+  
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.link{
+  @include mixin.link;
+}
+
+.text {
+  &--roboto-mono{
+    font-family: Roboto Mono;
+  }
+}

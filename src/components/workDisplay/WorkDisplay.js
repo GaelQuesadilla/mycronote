@@ -4,6 +4,9 @@ import { InputArea } from "../Input/InputArea";
 import { DisplayContent } from "../displayContent/DisplayContent";
 import { UseItem } from "../../hooks/UseItem";
 
+// Styles
+import "./WorkDisplay.scss";
+
 /**
  * Component see and make changes
  * @param {object} props - storageName:string, itemId:string 
